@@ -2,7 +2,7 @@
   position: relative;
   padding: 50px 20px;
   min-height: 90vh;
-  background: url("3.jpg") center/cover no-repeat;
+  background: url("3.jpg") ;
   animation: backgroundMove 10s ease-in-out infinite;
   display: flex;
   flex-direction: column;

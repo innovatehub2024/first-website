@@ -61,7 +61,7 @@ const SoftwareCompanyPage = () => {
                 </div>
             </section>
 
-            <section className="features-section">
+            <section className="software-features-section ">
                 <div className="features-container">
                     <h2>Our Expertise</h2>
                     <div className="features-grid">
