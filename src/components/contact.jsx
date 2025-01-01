@@ -28,11 +28,11 @@ const ContactForm = () => {
             <div className="info">
               <div className="information">
                 <img src="email.png" className="icon" alt="" />
-                <p>lorem@ipsum.com</p>
+                <p>theinnovatehub@gmail.com</p>
               </div>
               <div className="information">
                 <img src="phone.png" className="icon" alt="" />
-                <p>123-456-789</p>
+                <p>Our executive will contact for enquiry</p>
               </div>
             </div>
             <div className="social-media">
