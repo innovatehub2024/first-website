@@ -1,0 +1,146 @@
+.features-section {
+  position: relative;
+  padding: 50px 20px;
+  min-height: 90vh;
+  background: url("3.jpg") center/cover no-repeat;
+  animation: backgroundMove 10s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+.features-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #0f1012 100%);
+  pointer-events: none; /* To make sure overlay does not block content */
+}
+
+
+.features-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 400px;
+}
+
+/* Feature cards */
+.feature-card {
+  background-color: #b4bfc5;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 20px; /* Increase margin for card spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+  max-width: 275px; /* Fixed width for each card */
+  min-height: 300px;
+}
+
+/* Hover effects for the cards */
+.feature-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  height: 350px;
+  width: 270px;
+  border-radius: 30px;
+}
+
+/* Custom styles for slick arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+}
+
+.slick-prev {
+  left: -70px; /* Move left arrow further left */
+}
+
+.slick-next {
+  right: -70px; /* Move right arrow further right */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Dot styles */
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffd700; /* Highlight active dot */
+}
+
+/* Responsive styles */
+/* Media queries for different screen sizes */
+@media (min-width: 1025px) {
+  .feature-card {
+    max-width: 275px;
+    margin: 0 30px;
+  }
+  .slick-prev {
+    left: -70px;
+  }
+  .slick-next {
+    right: -70px;
+  }
+ }
+ 
+ @media (min-width: 769px) and (max-width: 1024px) {
+  .feature-card {
+    max-width: 250px;
+    margin: 0 20px;
+  }
+  .slick-prev {
+    left: -50px;
+  }
+  .slick-next {
+    right: -50px;
+  }
+ }
+ 
+ @media (max-width: 768px) {
+  .feature-card {
+    max-width: 270px;
+    margin: 0 15px;
+  }
+  .slick-prev {
+    left: -30px;
+  }
+  .slick-next {
+    right: -30px;
+  }
+ }
+ 
+ /* For very small mobile devices */
+ @media (max-width: 480px) {
+  .feature-card {
+    max-width: 240px;
+    margin: 0 10px;
+    min-height: 280px;
+  }
+  .slick-prev {
+    left: -20px;
+  }
+  .slick-next {
+    right: -20px;
+  }
+ }

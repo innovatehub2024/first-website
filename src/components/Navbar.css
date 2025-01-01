@@ -1,0 +1,137 @@
+/* Transparent and floating navbar */
+.navbar {
+  position: fixed;
+  top: 10px; /* Floating position */
+  left: 50%;
+  transform: translateX(-50%); /* Center align the navbar */
+  width: 70%; /* Adjust width to be responsive */
+  max-width: 1200px; /* Maximum width for larger screens */
+  height: 4vh; /* Height relative to viewport height */
+  background-color: rgba(231, 231, 233, 0); /* Transparent background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2vw; /* Padding relative to viewport width */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.312); /* Light shadow for the floating effect */
+  z-index: 100; /* Keep the navbar on top */
+  animation: float 4s ease-in-out infinite; /* Apply floating animation */
+  transition: background-color 0.3s ease;
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px); /* Slight upward movement */
+  }
+}
+
+/* Logo styling */
+.logo {
+  height: 100%; /* Make logo height responsive */
+  max-height: 50px; /* Set a max height for larger screens */
+  width: auto;
+}
+
+/* Navbar links styling */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2vw; /* Space between links relative to viewport width */
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: lightsalmon;
+  text-decoration: none;
+  font-size: 1.5rem; /* Scalable font size */
+  font-weight: 700;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+  position: relative;
+}
+
+/* Hover effect: Change color and add a bottom underline effect */
+.navbar-links a:hover {
+  color: #7adee8; /* Hover color */
+  transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
+/* Hover underline animation */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #d63336;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Get Started button styling */
+.navbar-button {
+  padding: 0.5rem 2vw; /* Padding relative to viewport width */
+  background-color: #0e3039;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: #2a0337; /* Hover color */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 90%; /* Adjust width for tablets */
+    padding: 1rem 5vw; /* Adjust padding */
+  }
+
+  .navbar-links {
+    gap: 4vw; /* Adjust space between links */
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .navbar-button {
+    padding: 0.5rem 3vw; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%; /* Adjust width for mobile screens */
+    padding: 1rem 6vw; /* Adjust padding */
+  }
+
+  .navbar-links {
+    gap: 5vw; /* Adjust space between links */
+  }
+
+  .navbar-links a {
+    font-size: 1.1rem; /* Adjust font size for mobile screens */
+  }
+
+  .navbar-button {
+    margin-left: 5px;
+    margin-top:2px;
+    padding: 0.3rem 2vw; /* Adjust padding for mobile screens */
+  }
+}

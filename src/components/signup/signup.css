@@ -1,0 +1,328 @@
+.bodysign {
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-image: url('../4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: backgroundMove 30s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.getcontainer {
+    background-color: #fff;
+    border-radius: 150px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: hidden;
+    width: 760px;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.getcontainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    animation: shine 4s infinite;
+}
+
+.sign-up, .sign-in {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in {
+    left: 0;
+    z-index: 2;
+}
+
+.sign-up {
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.getcontainer.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+.getcontainer.active .sign-in {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.getcontainer form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.getcontainer input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    max-width: 300px;
+}
+
+.getcontainer button {
+    background-color: #021526;
+    color: #fff;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.getcontainer button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 150px 150px 150px;
+}
+
+.getcontainer.active .toggle-container {
+    transform: translateX(-100%);
+}
+
+.toggle {
+    background: linear-gradient(to right, #6EACDA, #021526);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.getcontainer.active .toggle {
+    transform: translateX(50%);
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.getcontainer.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.getcontainer.active .toggle-right {
+    transform: translateX(200%);
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.social-icon a {
+    font-size: 24px;
+    color: #021526;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon a:hover {
+    color: #6EACDA;
+}
+
+.otp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.otp-form input {
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.resend-btn {
+    background-color: transparent !important;
+    color: #666 !important;
+    border: 1px solid #ccc !important;
+}
+
+.resend-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .getcontainer {
+        width: 90%;
+        min-height: 500px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .getcontainer {
+        width: 90%;
+        border-radius: 50px;
+        min-height: auto;
+        padding: 30px 0;
+        margin: 15px;
+    }
+
+    .toggle-container {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 40%;
+        border-radius: 50px;
+    }
+
+    .sign-up, .sign-in {
+        width: 100%;
+        height: 60%;
+    }
+
+    .toggle-panel {
+        height: 100%;
+        padding: 15px;
+    }
+
+    .getcontainer form {
+        padding: 20px;
+    }
+
+    .getcontainer input {
+        max-width: 280px;
+    }
+
+    .social-icon {
+        margin: 15px 0;
+    }
+
+    /* Adjust animations for mobile */
+    .getcontainer.active .sign-up {
+        transform: translateY(-60%);
+    }
+
+    .getcontainer.active .sign-in {
+        transform: translateY(-60%);
+    }
+
+    .getcontainer.active .toggle-container {
+        transform: translateY(150%);
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .getcontainer {
+        width: 95%;
+        border-radius: 30px;
+        padding: 20px 0;
+    }
+
+    .toggle-container {
+        border-radius: 30px;
+    }
+
+    .getcontainer input {
+        max-width: 250px;
+        font-size: 12px;
+    }
+
+    .getcontainer button {
+        padding: 8px 30px;
+        font-size: 12px;
+    }
+
+    .social-icon a {
+        font-size: 20px;
+    }
+
+    .toggle-panel {
+        padding: 10px;
+    }
+}

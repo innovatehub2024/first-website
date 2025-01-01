@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Allerta+Stencil&display=swap');
+
+body {
+  background-image: url("fullbg.jpg");
+  margin-top: 0%;
+  background-size: cover; /* Ensures the background scales properly */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Full-screen Canvas */
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Allows interaction with other elements */
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url("2.jpg");
+  background-size: cover;
+  animation: backgroundMove 10s ease-in-out infinite;
+  animation-direction: reverse;
+  z-index: 0; /* Canvas stays above the background */
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  font-family: "Alice", serif;
+  padding: 0 2rem; /* Add padding for better spacing on smaller screens */
+}
+
+.titlef {
+  font-size: 8rem; /* Default size for large screens */
+  font-weight: bold;
+  color: #eaedf3;
+  transition: transform 0.5s ease, color 0.5s ease, font-size 0.5s ease; 
+  transition: transform 1s ease, color 0.8s ease;
+  margin-bottom: 0px;
+  animation: titleSlideDown 2s ease-in-out forwards;
+}
+
+@keyframes titleSlideDown {
+  0% {
+    transform: translateY(-50px) scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.titlef:hover {
+  color: #d98f21;
+  transform: scale(1.2); /* Enlarge the title slightly */
+  font-size: calc(8rem + 1rem);
+}
+
+.slogan-container {
+  margin-top: 1rem;
+}
+
+.slogan {
+  font-size: 2rem; /* Default size for large screens */
+  color: #f5f5f5;
+  margin-bottom: 0px;
+}
+
+.slogan-word {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5rem; /* Default size for large screens */
+  margin-bottom: 10px;
+}
+
+.slogan-word:hover {
+  color: #d98f21;
+  transform: scale(1.1);
+  transition: transform 0.6s ease, color 0.6s ease;
+}
+
+.hero-button {
+  padding: 0.7rem 4rem;
+  font-size: 1rem;
+  background-color: #050d2c;
+  color: #f4eded;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 100px;
+}
+
+.hero-button:hover {
+  background-color: #4b99cd;
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  color: black;
+  font-weight: 800;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .titlef {
+    font-size: 6rem; /* Reduce title size for tablets */
+  }
+  .titlef:hover {
+    font-size: calc(6rem + 1rem); /* Adjust hover size for tablets */
+  }
+  .slogan {
+    font-size: 1.8rem;
+  }
+
+  .slogan-word {
+    font-size: 2rem;
+  }
+
+  .hero-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .titlef {
+    font-size: 4rem; /* Further reduce title size for mobile */
+  }
+  .titlef:hover {
+    font-size: calc(4rem + 0.8rem); /* Adjust hover size for mobile devices */
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+
+  .slogan-word {
+    font-size: 1.8rem;
+  }
+
+  .hero-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titlef {
+    font-size: 2.5rem; /* Adjust title size for small mobile screens */
+  }
+  .titlef:hover {
+    font-size: calc(2.5rem + 0.5rem); /* Adjust hover size for small mobile screens */
+  }
+  .slogan {
+    font-size: 1.2rem;
+  }
+
+  .slogan-word {
+    font-size: 1.5rem;
+  }
+
+  .hero-button {
+    font-size: 0.7rem;
+    padding: 0.4rem 2rem;
+  }
+}

@@ -1,0 +1,257 @@
+/* Container */
+*{
+  margin-top: 0%;
+} 
+.formbg{
+  background: linear-gradient(135deg, #1d1f62, #24c6dc, #43b02f, #6e1515); /* More colors for a smooth transition */
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 100%;
+  animation: gradientMove 7s ease infinite; /* Animation to move the gradient */
+  animation: fadeIn 1.5s ease, gradientMove 10s ease infinite;
+
+
+}
+/* Container */
+.form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 0px;
+  padding: 48px;
+  background: linear-gradient(135deg, #3a3d9a, #24c6dc, #ff7e5f, #ff9966); /* More colors for a smooth transition */
+  background-size: 300% 300%; /* Larger background size for the animation */
+  animation: gradientMove 7s ease infinite; /* Animation to move the gradient */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  color: white;
+  animation: fadeIn 1.5s ease, gradientMove 10s ease infinite;
+}
+
+/* Moving gradient animation */
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Form Styling */
+.software-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Textarea */
+.styled-textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f9fc;
+  font-size: 16px;
+  resize: vertical;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-textarea:focus {
+  outline: none;
+  border-color: #5a67d8;
+  box-shadow: 0 8px 16px rgba(90, 103, 216, 0.3);
+}
+
+/* Input Field */
+.styled-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f9fc;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-input:focus {
+  outline: none;
+  border-color: #5a67d8;
+  box-shadow: 0 8px 16px rgba(90, 103, 216, 0.3);
+}
+
+/* Select */
+.styled-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f9fc;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Budget Display */
+.budget-display {
+  display: flex;
+  align-items: center;
+}
+
+.budget-display input {
+  width: 100px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f9fc;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.budget-display input:focus {
+  outline: none;
+  border-color: #5a67d8;
+  box-shadow: 0 8px 16px rgba(90, 103, 216, 0.3);
+}
+
+/* Date Picker */
+.date-picker {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f9fc;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.date-picker:focus {
+  outline: none;
+  border-color: #5a67d8;
+  box-shadow: 0 8px 16px rgba(90, 103, 216, 0.3);
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.radio-label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  user-select: none;
+}
+
+.radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.radio-label input:checked ~ .checkmark {
+  background-color: #5a67d8;
+}
+
+.radio-label:hover .checkmark {
+  background-color: #ddd;
+}
+
+.radio-label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-label .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 15px;
+  background-color: #5a67d8;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #434190;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

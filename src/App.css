@@ -1,38 +1,29 @@
+/* App.css */
 .App {
-  text-align: center;
+  position: relative;
+  min-height: 100vh; /* Ensure the full height of the viewport */
+  background-image: url('components/bg.jpg'); /* Set your background image */
+  background-size: cover; /* Cover the entire container */
+  background-attachment: fixed; /* Keep the background fixed during scroll */
+  background-position: center; /* Center the background image */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  position: relative; /* Position relative to parent */
+  z-index: 2; /* Ensure content is above the background */
+  padding: 0px; /* Optional padding */
+  /* background-color: rgba(255, 255, 255, 0.8); Optional background color for content visibility */
+  border-radius: 10px; /* Optional border radius */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ComponentStyles.css */
+.section {
+  margin: 20px 0; /* Adjust the margin as needed */
+  padding: 5px; /* Optional: Add padding for inner spacing */
+  background-color: rgba(16, 30, 62, 0.8); /* Optional: Light background for readability */
+  border-radius: 10px; /* Optional: Rounded corners */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section1{
+  padding: 5px; /* Optional: Add padding for inner spacing */
+  background-color: rgba(16, 30, 62, 0.7); /* Optional: Light background for readability */
+  border-radius: 10px;
 }
