@@ -2,7 +2,7 @@
   "name": "innovatehub",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://innovatehub2024.github.io/official-website",
+  "homepage": "https://innovatehub2024.github.io/official-website/index.html",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
