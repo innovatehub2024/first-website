@@ -36,6 +36,7 @@ function App() {
                                 </>
                             } 
                         />
+                            <Hero />
                         <Route path="/About" element={<div className=''><About /></div>} />
                         <Route path="/services" element={<div className='section1'><Services /></div>} />
                         <Route path="/softwarepage1" element={<div className='section1'><SoftwareCompanyPage /></div>} />
