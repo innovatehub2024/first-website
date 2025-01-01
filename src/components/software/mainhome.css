@@ -1,4 +1,4 @@
-Global Animations
+/* Global Animations
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
@@ -26,7 +26,6 @@ Global Animations
     color: #f8fafc;
   }
   
-  /* Enhanced Hero Section */
   .hero-section {
     position: relative;
     height: 100vh;
@@ -110,7 +109,6 @@ Global Animations
     background: linear-gradient(to right, #2563eb, #4f46e5);
   }
   
-  /* Enhanced Who We Are Section */
   .who-we-are {
     padding: 8rem 2rem;
     background: linear-gradient(to bottom, #0f172a, #1e293b);
@@ -140,7 +138,6 @@ Global Animations
     border-radius: 2px;
   }
   
-  /* Enhanced Features Grid */
   .features-grid {
     display: flex;
     flex-wrap: wrap;
@@ -207,7 +204,6 @@ Global Animations
     display: flex;
 
   }
-  /* Enhanced Form Styles */
   .enquiry-section {
     padding: 6rem 2rem;
     background: linear-gradient(to bottom, #1e293b, #0f172a);
@@ -274,7 +270,6 @@ Global Animations
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
   }
   
-  /* Device Showcase Enhancements */
 
   .devices-grid {
     display: flex;
@@ -328,7 +323,6 @@ Global Animations
     color: #93c5fd;
   }
   
-  /* Additional Animations */
   .animate-pulse {
     animation: pulse 2s infinite;
   }
@@ -337,7 +331,6 @@ Global Animations
     animation: float 3s infinite ease-in-out;
   }
   
-  /* Responsive Design Improvements */
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2.5rem;
@@ -366,4 +359,4 @@ Global Animations
       width: 100%;
       max-width: 300px;
     }
-  }
+  } */
